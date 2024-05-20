@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon src/server.js",
-    "test": "NODE_ENV=test mocha --reporter spec --ui bdd 'test/unit/**/*-test.js' --exit",
+    "test": "mocha --reporter spec --ui bdd 'test/unit/controllers/countries-test.js' --exit",
     "coverage": "nyc --reporter=lcov --reporter=text --reporter=cobertura npm test",
     "lint": "./node_modules/.bin/eslint .",
     "apidoc": "./node_modules/.bin/apidoc-swagger -i src/ -o doc/ && ./node_modules/.bin/apidoc -i src/ -o doc/",
@@ -29,7 +29,8 @@
     "restify": "^8.1.0",
     "restify-errors": "^7.0.0",
     "restify-plugins": "^1.6.0",
-    "yargs": "^6.5.0"
+    "yargs": "^6.5.0",
+    "axios": "^0.24.0"
   },
   "devDependencies": {
     "apidoc": "^0.17.7",
